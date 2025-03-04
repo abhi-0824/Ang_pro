@@ -1,0 +1,31 @@
+<div class="chart-container">
+  <ngx-charts-bar-vertical
+    [view]="[700, 400]"
+    [results]="barChartData"
+    [scheme]="'vivid'"
+    [xAxis]="true"
+    [yAxis]="true"
+    [legend]="false"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [xAxisLabel]="'Month'"
+    [yAxisLabel]="'Orders'"
+    [roundEdges]="true"
+  >
+  </ngx-charts-bar-vertical>
+
+  <ngx-charts-line-chart
+    [view]="[700, 400]"
+    [results]="lineChartData"
+    [scheme]="'cool'"
+    [xAxis]="true"
+    [yAxis]="true"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [xAxisLabel]="'Month'"
+    [yAxisLabel]="'Orders'"
+    [autoScale]="true"
+  >
+  </ngx-charts-line-chart>
+</div>

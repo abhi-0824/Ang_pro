@@ -1,0 +1,8 @@
+<div class="dropdown">
+  <button class="dropdown-button">Sort By ▼</button>
+  <ul class="dropdown-menu">
+    <li *ngFor="let option of sortOptions">
+      <button (click)="selectSort(option)">{{ option }}</button>
+    </li>
+  </ul>
+</div>

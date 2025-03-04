@@ -1,0 +1,4 @@
+<div class="dashboard">
+  <app-sort-by (filterChanged)="updateFilter($event)"></app-sort-by>
+  <app-chart [filter]="selectedFilter"></app-chart>
+</div>
