@@ -1,31 +1,35 @@
 <div class="chart-container">
-  <ngx-charts-bar-vertical
-    [view]="[700, 400]"
-    [results]="barChartData"
-    [scheme]="'vivid'"
-    [xAxis]="true"
-    [yAxis]="true"
-    [legend]="false"
-    [showXAxisLabel]="true"
-    [showYAxisLabel]="true"
-    [xAxisLabel]="'Month'"
-    [yAxisLabel]="'Orders'"
-    [roundEdges]="true"
-  >
-  </ngx-charts-bar-vertical>
+  <svg width="700" height="400">
+    <!-- Bar Chart -->
+    <g transform="translate(0,0)">
+      <ngx-charts-bar-vertical
+        [view]="[700, 400]"
+        [results]="barChartData"
+        [scheme]="'vivid'"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"
+        [showXAxisLabel]="true"
+        [showYAxisLabel]="true"
+        [xAxisLabel]="'Month'"
+        [yAxisLabel]="'Orders'"
+        [roundEdges]="true"
+      ></ngx-charts-bar-vertical>
+    </g>
 
-  <ngx-charts-line-chart
-    [view]="[700, 400]"
-    [results]="lineChartData"
-    [scheme]="'cool'"
-    [xAxis]="true"
-    [yAxis]="true"
-    [legend]="true"
-    [showXAxisLabel]="true"
-    [showYAxisLabel]="true"
-    [xAxisLabel]="'Month'"
-    [yAxisLabel]="'Orders'"
-    [autoScale]="true"
-  >
-  </ngx-charts-line-chart>
+    <!-- Line Chart (Overlay) -->
+    <g transform="translate(0,0)">
+      <ngx-charts-line-chart
+        [view]="[700, 400]"
+        [results]="lineChartData"
+        [scheme]="'cool'"
+        [xAxis]="true"
+        [yAxis]="true"
+        [legend]="false"
+        [showXAxisLabel]="false"
+        [showYAxisLabel]="false"
+        [autoScale]="true"
+      ></ngx-charts-line-chart>
+    </g>
+  </svg>
 </div>

@@ -1,0 +1,7 @@
+<div class="date-filter-container">
+  <select (change)="onFilterChange($event)" class="date-filter-select">
+    <option *ngFor="let option of filterOptions()" [value]="option.value">
+      {{ option.label }}
+    </option>
+  </select>
+</div>

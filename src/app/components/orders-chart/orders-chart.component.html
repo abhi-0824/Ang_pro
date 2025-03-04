@@ -1,0 +1,7 @@
+<div class="orders-chart-container">
+  <app-date-filter (filterChanged)="onFilterChanged($event)"></app-date-filter>
+
+  <div class="chart-wrapper">
+    <canvas #ordersChart class="orders-chart"></canvas>
+  </div>
+</div>
